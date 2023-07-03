@@ -6,7 +6,7 @@ const selectors = {
 selectors.inputEl.addEventListener('input', handlerInput);
 
 function handlerInput(evt) {
-    if (!evt.currentTarget.value)
+    if (!evt.currentTarget.value.trim())
         selectors.spanEl.textContent = "Anonymous";
     else
         selectors.spanEl.textContent = evt.currentTarget.value;

@@ -6,10 +6,11 @@ formEl.addEventListener('submit', handlerSubmit);
 function handlerSubmit(evt) { 
     evt.preventDefault();
 
-    //если полей input не много:
     const { email, password } = evt.currentTarget.elements;
-    if (!email.value || !password.value)
+    if (!email.value.trim() || !password.value.trim()) {
         alert('Fields must be filled');
+       return
+    }
     const data = {
         email: email.value,
         password: password.value,
@@ -17,23 +18,5 @@ function handlerSubmit(evt) {
 
     console.log(data);
     evt.currentTarget.reset();
-
-
-
-// если полей input много, чтобы не прописывать вручную каждое:
-    // const data = Object.keys(evt.currentTarget.elements).reduce((acc, item) => { 
-    //     if (isNaN(item)) { 
-    //         acc[item] = evt.currentTarget.elements[item].value;
-    //     }
-    //     return acc;
-    // }, {})
-   
-
-    // можно с помощью FormData:
-    // const formData = new FormData(evt.currentTarget);
-    // const data = {};
-    // formData.forEach((value, key) => {
-    //     data[key] = value;
-    // });
 
 }

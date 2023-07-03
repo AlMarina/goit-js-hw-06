@@ -8,8 +8,9 @@ const selectors = {
 selectors.btnEl.addEventListener('click', handlerClick)
 
 function handlerClick() { 
-  selectors.span.textContent = getRandomHexColor(); 
-selectors.div.parentElement.style.backgroundColor = getRandomHexColor(); 
+  const color = getRandomHexColor();
+  selectors.span.textContent = color; 
+selectors.div.parentElement.style.backgroundColor = color; 
 
 }
 

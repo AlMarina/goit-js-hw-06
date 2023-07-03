@@ -7,13 +7,6 @@ const selectors = {
 selectors.butDec.addEventListener('click', handlerDec)
 selectors.butInc.addEventListener('click', handlerInc)
 
-// function handlerDec() {
-//    selectors.span.textContent = Number(selectors.span.textContent) - 1;
-// }
-
-// function handlerInc() {
-//     selectors.span.textContent = Number(selectors.span.textContent) + 1;
-// }
 
 let counterValue = 0;
 
